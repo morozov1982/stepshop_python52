@@ -2,7 +2,21 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    title = 'Главная - StepShop'
+
+    context = {
+        'title': title,
+    }
+    return render(request, 'index.html', context)
+
+
+def products(request):
+    title = 'Товары - StepShop'
+
+    context = {
+        'title': title,
+    }
+    return render(request, 'products.html', context)
 
 
 def product(request):
@@ -22,3 +36,13 @@ def contacts(request):
     }
 
     return render(request, 'contacts.html', context)
+
+
+def about(request):
+    title = 'О нас - StepShop'
+
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'about.html', context)
